@@ -10,9 +10,12 @@
 
 #include "base/logging.h"
 
+
 ssize_t BackTrace::ToString(void * const* callstack, int frames, char *buf,
-                            size_t buf_len) {
-#ifdef DARWIN
+                           size_t buf_len) {
+#ifdef _WINDOWS
+	return 0;
+#elif DARWIN
     return 0;
 #else
     buf[0] = '\0';

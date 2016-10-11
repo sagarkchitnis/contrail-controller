@@ -10,9 +10,9 @@ try:
 except ImportError:
     pass
     
-vpath = '#/third_party/boost_1_48_0'
+vpath = '#/third_party/boost_1_62_0'
 engine = vpath + '/tools/build/v2/engine'
-version = '1.48.0'
+version = '1.62.0'
 
 def MapPath(xpath, list):
     return map(lambda x: '#/' + Dir('.').path + '/tools/' + x, list)
